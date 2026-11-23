@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="search">
+    <input class="input" type="text" placeholder="search a home" #filter />
+    <button type="button" class="primary" (click)="filterResults(filter.value)">
+      Search
+    </button>
+  </div>
+  <div class="results">
+    @for(housingLocation of filteredLocationList; track $index) {
+
+    <app-housing-location [housingLocation]="housingLocation" />
+    }
+  </div>
+</div>

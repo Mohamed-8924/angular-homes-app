@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="listing">
+    <img
+      [src]="housingLocation().photo"
+      alt="housingLocation().name"
+      class="listing-photo"
+      crossorigin />
+    <h2 class="head">{{ housingLocation().name }}</h2>
+    <p class="location">
+      {{ housingLocation().city }}, {{ housingLocation().state }}
+    </p>
+    <a [routerLink]="['/details', housingLocation().id]">Learn More</a>
+  </div>
+</div>
